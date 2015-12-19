@@ -58,7 +58,7 @@ gulp.task('zip', function() {
       'readme.txt',
       'screenshot.png'
     ], {base: '.'})
-    .pipe(zip('default-bootstrap-theme-'+argv.version+'.zip', {compress:false}))
+    .pipe(zip('gulf-coast-sentinels-'+argv.version+'.zip', {compress:false}))
     .pipe(gulp.dest('../../../../theme-files/'));
 });
 
