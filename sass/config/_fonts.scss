@@ -1,0 +1,82 @@
+/**********
+ * AVENIR *
+ *********/
+
+ @font-face {
+  font-family: 'Avenir';
+  src: url('fonts/avenir/avenir-book.ttf');
+  src: url('fonts/avenir/avenir-book.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/avenir/avenir-medium.ttf');
+  src: url('fonts/avenir/avenir-medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('fonts/avenir/avenir-medium-italic.ttf');
+  src: url('fonts/avenir/avenir-medium-italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/**********
+ * GASPAR *
+ *********/
+
+ @font-face {
+  font-family: 'Gaspar';
+  src: url('./fonts/gaspar/gaspar-regular.eot');
+  src: url('./fonts/gaspar/gaspar-regular.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/gaspar/gaspar-regular.woff2') format('woff2'),
+  url('./fonts/gaspar/gaspar-regular.woff') format('woff'),
+  url('./fonts/gaspar/gaspar-regular.ttf') format('truetype'),
+  url('./fonts/gaspar/gaspar-regular.svg#gasparregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gaspar';
+    src: url('./fonts/gaspar/gaspar-regular-italic-webfont.eot');
+    src: url('./fonts/gaspar/gaspar-regular-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/gaspar/gaspar-regular-italic-webfont.woff2') format('woff2'),
+         url('./fonts/gaspar/gaspar-regular-italic-webfont.woff') format('woff'),
+         url('./fonts/gaspar/gaspar-regular-italic-webfont.ttf') format('truetype'),
+         url('./fonts/gaspar/gaspar-regular-italic-webfont.svg#gasparitalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gaspar';
+  src: url('./fonts/gaspar/gaspar-bold-webfont.eot');
+  src: url('./fonts/gaspar/gaspar-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/gaspar/gaspar-bold-webfont.woff2') format('woff2'),
+  url('./fonts/gaspar/gaspar-bold-webfont.woff') format('woff'),
+  url('./fonts/gaspar/gaspar-bold-webfont.ttf') format('truetype'),
+  url('./fonts/gaspar/gaspar-bold-webfont.svg#gasparbold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gaspar';
+  src: url('./fonts/gaspar/gaspar-bold-italic-webfont.eot');
+  src: url('./fonts/gaspar/gaspar-bold-italic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('./fonts/gaspar/gaspar-bold-italic-webfont.woff2') format('woff2'),
+  url('./fonts/gaspar/gaspar-bold-italic-webfont.woff') format('woff'),
+  url('./fonts/gaspar/gaspar-bold-italic-webfont.ttf') format('truetype'),
+  url('./fonts/gaspar/gaspar-bold-italic-webfont.svg#gasparbold_italic') format('svg');
+  font-weight: 600;
+  font-style: italic;
+}
+
+$avenir: 'Avenir', Futura, Verdana, Geneva, sans-serif;
+$gaspar: 'Gaspar', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
