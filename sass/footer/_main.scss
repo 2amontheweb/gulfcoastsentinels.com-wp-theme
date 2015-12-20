@@ -1,2 +1,50 @@
+/***************
+ * MAIN FOOTER *
+ ***************/
+
 #footer-main {
+  border-top: 1px solid $blue2;
+  @include rem-fallback(padding-top, 1);
+  .col-sm-8 {
+    @include rem-fallback(padding-right, 1);
+  }
+  h4 {
+    font-family: $title;
+    color: $blue3;
+    font-weight: 600;
+    font-size: 2.25em;
+    @include rem-fallback(margin-bottom, 0.25);
+  }
+  h6 {
+    font-family: $title;
+    color: $gold4;
+    font-size: 1.75em;
+    margin-top: 0;
+  }
+  p {
+    font-size: 1.25em;
+  }
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 10px;
+    margin-left: 15px;
+    li {
+      font-size: 1.75em;
+      @include rem-fallback(padding-bottom, 0.25);
+      i {
+        float: left;
+        width: 30px;
+        @include rem-fallback(padding-right, 1);
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+  }
 }
