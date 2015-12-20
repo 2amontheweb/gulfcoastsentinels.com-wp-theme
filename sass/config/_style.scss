@@ -19,9 +19,12 @@ html{
 
   body {
     font-size: 62.5%;
+    // padding-top: 10px;
+    // padding-bottom: 20px;
+    // font-size: 62.5%;
+    font-family: $text;
+    background-color: $white1; //#f8f8f8
     color: $black;
-    background-color: $white;
-    font-family: $avenir;
   }
 }
 
@@ -39,38 +42,38 @@ html{
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  padding: 0;
-  color: $black;
-  font-family: $avenir;
-  line-height: 1.4;
-  margin: 0 auto;
+  // padding: 0;
+  // color: $black;
+  // font-family: $avenir;
+  // line-height: 1.4;
+  // margin: 0 auto;
 }
 h1 {
-  letter-spacing: 1px;
-  font-family: $gaspar;
+  // letter-spacing: 1px;
+  // font-family: $gaspar;
 }
 
 h2 {
-  font-size: 1.5em;
-  font-weight: 600;
-  font-family: $gaspar;
-  letter-spacing: 1px;
-  @include rem-fallback(padding-bottom, 1);
+  // font-size: 1.5em;
+  // font-weight: 600;
+  // font-family: $gaspar;
+  // letter-spacing: 1px;
+  // @include rem-fallback(padding-bottom, 1);
 }
 h5 {
-  @include rem-fallback(padding-bottom, 1);
+  // @include rem-fallback(padding-bottom, 1);
 }
 
 p {
-  font-size: 1.25em;
-  line-height: 1.75;
-  letter-spacing: 0.5px;
-  @include rem-fallback(padding-bottom, 1);
+  // font-size: 1.25em;
+  // line-height: 1.75;
+  // letter-spacing: 0.5px;
+  // @include rem-fallback(padding-bottom, 1);
 }
 
 li {
-  font-size: 1.25em;
-  letter-spacing: 0.5px;
+  // font-size: 1.25em;
+  // letter-spacing: 0.5px;
 }
 
 a {
@@ -83,11 +86,11 @@ a {
   }
 }
 
-a,
-button,
-input {
-  outline: 0 !important;
-}
+// a,
+// button,
+// input {
+//   outline: 0 !important;
+// }
 
 div[class^="col-"], div[class*=" col-"] {
   padding: 0;

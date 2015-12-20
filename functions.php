@@ -1,13 +1,13 @@
 <?php
 /**
- * Default Bootstrap Theme functions and definitions.
+ * Gulf Coast Sentinels functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Default_Bootstrap_Theme
+ * @package Gulf Coast Sentinels
  */
 
-if ( ! function_exists( 'default_bootstrap_theme_setup' ) ) :
+if ( ! function_exists( 'gulf_coast_sentinels_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'default_bootstrap_theme_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function default_bootstrap_theme_setup() {
+function gulf_coast_sentinels_setup() {
   /*
    * Make theme available for translation.
    * Translations can be filed in the /languages/ directory.
-   * If you're building a theme based on Default Bootstrap Theme, use a find and replace
-   * to change 'default-bootstrap-theme' to the name of your theme in all the template files.
+   * If you're building a theme based on Gulf Coast Sentinels, use a find and replace
+   * to change 'gulf-coast-sentinels' to the name of your theme in all the template files.
    */
-  load_theme_textdomain( 'default-bootstrap-theme', get_template_directory() . '/languages' );
+  load_theme_textdomain( 'gulf-coast-sentinels', get_template_directory() . '/languages' );
 
   // Add default posts and comments RSS feed links to head.
   add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,8 @@ function default_bootstrap_theme_setup() {
 
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
-    'primary' => esc_html__( 'Primary', 'default-bootstrap-theme' ),
+    'primary' => esc_html__( 'Primary', 'gulf-coast-sentinels' ),
+    'header' => esc_html__( 'Header', 'gulf-coast-sentinels' ),
   ) );
 
   /*
@@ -72,13 +73,13 @@ function default_bootstrap_theme_setup() {
   ) );
 
   // Set up the WordPress core custom background feature.
-  add_theme_support( 'custom-background', apply_filters( 'default_bootstrap_theme_custom_background_args', array(
+  add_theme_support( 'custom-background', apply_filters( 'gulf_coast_sentinels_custom_background_args', array(
     'default-color' => 'ffffff',
     'default-image' => '',
   ) ) );
 }
 endif;
-add_action( 'after_setup_theme', 'default_bootstrap_theme_setup' );
+add_action( 'after_setup_theme', 'gulf_coast_sentinels_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -87,19 +88,19 @@ add_action( 'after_setup_theme', 'default_bootstrap_theme_setup' );
  *
  * @global int $content_width
  */
-function default_bootstrap_theme_content_width() {
-  $GLOBALS['content_width'] = apply_filters( 'default_bootstrap_theme_content_width', 640 );
+function gulf_coast_sentinels_content_width() {
+  $GLOBALS['content_width'] = apply_filters( 'gulf_coast_sentinels_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'default_bootstrap_theme_content_width', 0 );
+add_action( 'after_setup_theme', 'gulf_coast_sentinels_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function default_bootstrap_theme_widgets_init() {
+function gulf_coast_sentinels_widgets_init() {
   register_sidebar( array(
-    'name'          => esc_html__( 'Sidebar', 'default-bootstrap-theme' ),
+    'name'          => esc_html__( 'Sidebar', 'gulf-coast-sentinels' ),
     'id'            => 'sidebar-1',
     'description'   => '',
     'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -108,23 +109,23 @@ function default_bootstrap_theme_widgets_init() {
     'after_title'   => '</h2>',
   ) );
 }
-add_action( 'widgets_init', 'default_bootstrap_theme_widgets_init' );
+add_action( 'widgets_init', 'gulf_coast_sentinels_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function default_bootstrap_theme_scripts() {
-  wp_enqueue_style( 'default-bootstrap-theme-style', get_stylesheet_uri() );
+function gulf_coast_sentinels_scripts() {
+  wp_enqueue_style( 'gulf-coast-sentinels-style', get_stylesheet_uri() );
 
-  wp_enqueue_script( 'default-bootstrap-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+  wp_enqueue_script( 'gulf-coast-sentinels-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-  wp_enqueue_script( 'default-bootstrap-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+  wp_enqueue_script( 'gulf-coast-sentinels-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
   }
 }
-add_action( 'wp_enqueue_scripts', 'default_bootstrap_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'gulf_coast_sentinels_scripts' );
 
 /**
  * Implement the Custom Header feature.

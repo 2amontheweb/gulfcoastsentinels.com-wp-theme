@@ -12,11 +12,13 @@
 ?>
 
       <footer id="footer-main" class="site-footer" role="contentinfo">
-        <div class="site-info">
-          <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'default-bootstrap-theme' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'default-bootstrap-theme' ), 'WordPress' ); ?></a>
-          <span class="sep"> | </span>
-          <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'default-bootstrap-theme' ), 'default-bootstrap-theme', '<a href="http://jimmypocock.com" rel="designer">Jimmy Pocock</a>' ); ?>
-        </div><!-- .site-info -->
+        <div class="container">
+          <div class="site-info">
+            <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'default-bootstrap-theme' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'default-bootstrap-theme' ), 'WordPress' ); ?></a>
+            <span class="sep"> | </span>
+            <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'default-bootstrap-theme' ), 'default-bootstrap-theme', '<a href="http://jimmypocock.com" rel="designer">Jimmy Pocock</a>' ); ?>
+          </div><!-- .site-info -->
+        </div>
       </footer><!-- #colophon -->
     </div><!-- #page -->
 

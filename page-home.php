@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Main Template
+ * Template Name: Home Template
  */
 
 get_header(); ?>
@@ -11,8 +11,7 @@ get_header(); ?>
   <div class="container">
 
     <div class="main-content">
-
-      <?php the_title( '<h1>', '</h1>' ); ?>
+      <h1>Home Page</h1>
 
       <?php while ( have_posts() ) : the_post();  ?>
 
