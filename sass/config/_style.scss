@@ -8,10 +8,10 @@
   box-sizing: border-box;
 }
 
-html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+// html * {
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
 
 html{
   height: 100%;
@@ -79,9 +79,14 @@ li {
 a {
   transition: all 0.3s ease;
   cursor: pointer;
+  color: $blue3;
+  // font-style: italic;
   &:visited,
   &:focus,
+  &:active,
   &:hover {
+    background: transparent;
+    color: $blue3;
     text-decoration:none;
   }
 }

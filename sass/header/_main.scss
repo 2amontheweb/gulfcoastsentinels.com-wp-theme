@@ -1,2 +1,133 @@
+/**********
+ * HEADER *
+ **********/
 #header-main {
+  position: relative;
+  .header-top {
+    height: 200px;
+    @include mobile {
+      height: auto;
+    }
+  }
+  h1 {
+    font-family: $title;
+    color: $blue3;
+    font-size: 3.15em;
+    font-weight:600;
+    position: absolute;
+    left: 269px;
+    top: 35px;
+    .strong {
+      display: block;
+    }
+    .subtitle {
+      color: $gold4;
+      font-size: 0.85em;
+      font-weight: 400;
+    }
+    @include mobile {
+      position: static;
+      margin: 0;
+      font-size: 2.5em;
+      @include rem-fallback(padding, 0.5, 0, 0.5, 0.75);
+    }
+  }
+  .nav-logo {
+    width: 250px;
+    padding-top: 20px;
+    padding-left: 20px;
+    z-index: 10;
+    position: absolute;
+    @include mobile {
+      display: none;
+    }
+  }
+  .navbar-toggle {
+    border-bottom: 2px solid $white2;
+    @include background-g(0deg, $blue2, 5%, $blue5, 95%);
+    background: transparent;
+    border-radius: 0;
+    float: none;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    margin: 8px 0 0;
+    color: $blue3;
+    font-size: 1.75em;
+    letter-spacing: 3px;
+    border-top: 2px solid $blue3;
+    border-bottom: 2px solid $blue3;
+    .navbar-button-arrow {
+      width: 2%;
+    }
+  }
+  .navbar-list {
+    @include background-g(0deg, $blue2, 5%, $blue5, 95%);
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    z-index: 1;
+    padding:0;
+    @include mobile {
+      position: initial;
+    }
+
+    .nav {
+      margin-bottom: 3px;
+      border-bottom: 1px solid $white2;
+      border-top: 1px solid $white2;
+      margin-top: 3px;
+      padding-left: 255px;
+      width: 100%;
+      @include mobile {
+        @include rem-fallback(padding-left, 1);
+        width: auto;
+      }
+      li {
+        a {
+          padding: 10px 15px;
+          color: $white2;
+          font-family: $title;
+          font-size: 1.5em;
+          @include tablet {
+            padding-left: 8px;
+            padding-right: 8px;
+          }
+          &:visited,
+          &:active,
+          &:focus {
+            background: transparent;
+          }
+          &:hover {
+            color: $blue2;
+            background: $white2;
+          }
+        }
+
+      }
+      .open > a {
+        background: transparent;
+        color: $white2;
+      }
+      .dropdown-menu {
+        @include background-g(0deg, $blue5, 5%, $blue2, 95%);
+        border: 0;
+        border-top: 1px solid $white2;
+        @include mobile {
+          background: transparent;
+          border-bottom: 1px solid $white2;
+        }
+
+        li {
+          a {
+            font-size: 1em;
+          }
+        }
+        & > .active > a {
+          background: $white2;
+          color: $blue2;
+        }
+      }
+    }
+  }
 }

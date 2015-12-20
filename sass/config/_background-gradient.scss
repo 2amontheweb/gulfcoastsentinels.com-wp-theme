@@ -1,0 +1,11 @@
+/***********************
+ * BACKGROUND GRADIENT *
+ ***********************/
+
+@mixin background-g($def, $color1, $percentage1, $color2, $percentage2) {
+  background: -webkit-linear-gradient($def, $color1 $percentage1, $color2 $percentage2);
+  background:    -moz-linear-gradient($def, $color1 $percentage1, $color2 $percentage2);
+  background:     -ms-linear-gradient($def, $color1 $percentage1, $color2 $percentage2);
+  background:      -o-linear-gradient($def, $color1 $percentage1, $color2 $percentage2);
+  background:         linear-gradient($def, $color1 $percentage1, $color2 $percentage2);
+}

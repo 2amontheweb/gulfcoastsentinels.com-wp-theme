@@ -42,33 +42,46 @@
     <div id="page" class="site">
       <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'default-bootstrap-theme' ); ?></a>
 
-      <header id="header-main" class="site-header" role="banner">
-        <nav class="navbar">
-          <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="/">
-                <h1>Default Bootstrap Theme</h1>
-              </a>
-            </div>
+      <header id="header-main" class="site-header">
+        <div class="header-top">
+          <a href="/">
+            <img class="nav-logo" src="<?php bloginfo('stylesheet_directory'); ?>/img/logos/nav-logo.png" alt="Navigation Logo">
+          </a>
+          <h1><a href="/"><span class="strong">Gulf Coast Sentinels</span> <span class="subtitle italic">Scholarship Foundation</span></a></h1>
+        </div><!-- //SITE HEADER TOP -->
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <?php
-              wp_nav_menu( array(
+        <!-- RESPONSIVE MENU BUTTON -->
+        <div class="navbar-button">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sentinels-navbar-collapse">
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/icons/down-arrow-blue.png" class="navbar-button-arrow">
+            Click for Navigation
+            <img src="<?php bloginfo('stylesheet_directory'); ?>/img/icons/down-arrow-blue.png" class="navbar-button-arrow">
+          </button>
+        </div><!-- //NAVBAR HEADER -->
 
-                'theme_location' => 'header',
-                'container'       => 'nav',
-                'container_class' => 'navbar-collapse collapse',
-                'menu_class'        => 'nav navbar-nav navbar-right'
+        <?php
+          // Found at: https://github.com/twittem/wp-bootstrap-navwalker
+          require_once('wp_bootstrap_navwalker.php');
 
-              ) );
-            ?>
-          </div><!-- /.container -->
-        </nav>
-      </header><!-- #masthead -->
+          $args = array(
+            'theme_location'  => 'header',
+            // 'menu'            => '',
+            'container'       => 'nav',
+            'container_class' => 'navbar-list navbar-collapse collapse',
+            'container_id'    => 'sentinels-navbar-collapse',
+            'menu_class'      => 'nav navbar-nav',
+            // 'menu_id'         => '',
+            'echo'            => true,
+            // 'fallback_cb'     => 'wp_page_menu',
+            'before'          => '',
+            'after'           => '',
+            'link_before'     => '',
+            'link_after'      => '',
+            'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            'depth'           => 0,
+            'walker'          => new wp_bootstrap_navwalker()
+          );
+
+          wp_nav_menu( $args );
+        ?>
+      </header><!-- #header-main -->
