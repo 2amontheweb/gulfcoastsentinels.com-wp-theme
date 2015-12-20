@@ -5,20 +5,24 @@
 
 get_header(); ?>
 
-  <!-- MAIN CONTENT
+<!-- MAIN CONTENT
 ================================================== -->
 <div id="page-main" class="page">
   <div class="container">
 
     <div class="main-content">
 
-      <?php the_title( '<h1>', '</h1>' ); ?>
+      <?php
 
-      <?php while ( have_posts() ) : the_post();  ?>
+        the_title( '<h2>', '</h2>' );
 
-      <?php the_content(); ?>
+        while ( have_posts() ) : the_post();
 
-      <?php endwhile; ?>
+        the_content();
+
+        endwhile;
+
+      ?>
 
     </div>
 

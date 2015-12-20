@@ -1,0 +1,11 @@
+#page-board-of-directors,
+#page-executive-team {
+  .member {
+    font-size: 0.75em;
+    text-align: center;
+    @include rem-fallback(padding-bottom, 2.5);
+    img {
+      max-width: 237px;
+    }
+  }
+}

@@ -1,2 +1,21 @@
 #page-main {
+  @include rem-fallback(padding, 1, 0, 3);
+  ul {
+    padding-left: 0;
+    @include rem-fallback(padding-bottom, 2);
+    ul {
+      padding-bottom: 0;
+    }
+  }
+  li {
+    font-size: 1.75em;
+    li {
+      font-size: 1em;
+    }
+  }
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

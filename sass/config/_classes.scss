@@ -2,26 +2,6 @@
 * CUSTOM CLASSES *
 *****************/
 
-// .content-box {
-//   box-shadow: 0 6px 12px rgba($black, 0.175);
-//   border: 1px solid $grey;
-//   background: $white;
-//   position: relative;
-//   @include rem-fallback(margin-top, 1.5);
-//   @include rem-fallback(margin-bottom, 1.5);
-//   @include rem-fallback(padding, 1);
-//   .content-left {
-//     @include aboveMobile {
-//       border-right: 2px solid $grey;
-//       @include rem-fallback(padding-right, 2);
-//     }
-//   }
-//   .content-right {
-//     @include aboveMobile {
-//       @include rem-fallback(padding-left, 2);
-//     }
-//   }
-// }
 .strong {
   font-weight: bold;
 }
@@ -37,80 +17,20 @@
 .disclaimer {
   font-size: 1.25em;
 }
-// .no-style-link {
-//   text-decoration:none;
-//   color: $black;
-// }
-// img.right-bottom-corner {
-//   position: absolute;
-//   bottom: 10px;
-//   right: 10px;
-// }
-.master-slider-container {
-  // min-height: 450px;
-}
-// .right-bottom-corner {
-//   position: absolute;
-//   right: 10px;
-//   bottom: 10px;
-//   @include mobile {
-//     display: none;
-//   }
-// }
-// .blue-button,
-// input[type="submit"].blue-button {
-//   transition: all 0.3s ease;
-//   font-size: 2em;
-//   letter-spacing: 0.5px;
-//   max-width: 200px;
-//   margin: 0 auto;
-//   font-family: $gaspar;
-//   background: $grey;
-//   color: $white;
-//   font-weight: 600;
-//   text-transform: uppercase;
-//   box-shadow: 0 3px 6px rgba($black, 0.175);
-//   text-shadow: 0 3px 6px rgba($black, 0.175);
-//   letter-spacing: 0.5px;
-//   @include rem-fallback(margin-top, 1);
-//   @include rem-fallback(padding, 0.5, 1.5);
-//   &:visited {
-//     color: $white;
-//   }
-//   &:hover {
-//     background: lighten($grey, 70%);
-//     color: $grey;
-//   }
-//   @include mobile {
-//     display: block;
-//     width: 100%;
-//     max-width: 100%;
-//   }
-// }
-
-// .button-margin {
-//   @include rem-fallback(margin-top, 1.5);
-//   @include rem-fallback(margin-bottom, 1.5);
-// }
 .no-padding {
   padding: 0;
 }
-// .padding-bottom-2 {
-//   @include rem-fallback(padding-bottom, 2);
-// }
-// .padding-bottom-6 {
-//   @include rem-fallback(padding-bottom, 6);
-// }
-// .input,
-// input[type="text"].input,
-// input[type="email"].input,
-// input[type="phone"].input,
-// textarea.input {
-//   border: 1px solid $black;
-//   border-radius: 1px;
-//   @include rem-fallback(padding, 0.5, 1);
-//   @include rem-fallback(margin-bottom, 1);
-//   @include mobile {
-//     width: 100%;
-//   }
-// }
+.width-75 {
+  display: block;
+  width: 75%;
+}
+.block-center {
+  display: block;
+  margin: 0 auto;
+}
+.image-shadow {
+  box-shadow: 0 5px 22px 5px rgba(50,50,50,0.75);
+}
+.image-border-radius-10 {
+  border-radius: 10px;
+}
