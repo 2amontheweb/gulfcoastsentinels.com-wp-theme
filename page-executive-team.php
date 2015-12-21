@@ -7,7 +7,7 @@ get_header(); ?>
 
 <!-- MAIN CONTENT
 ================================================== -->
-<div id="page-executive-team">
+<div id="page-executive-team" class="custom-page">
   <div class="container">
 
     <div class="main-content">

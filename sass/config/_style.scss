@@ -93,3 +93,7 @@ a {
 div[class^="col-"], div[class*=" col-"] {
   padding: 0;
 }
+
+.custom-page {
+  @include rem-fallback(padding, 2, 0, 3);
+}

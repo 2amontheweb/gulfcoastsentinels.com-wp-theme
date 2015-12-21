@@ -7,7 +7,7 @@ get_header(); ?>
 
 <!-- MAIN CONTENT
 ================================================== -->
-<div id="page-board-of-directors">
+<div id="page-board-of-directors" class="custom-page">
   <div class="container">
 
     <div class="main-content">

@@ -1,0 +1,44 @@
+#page-home {
+  padding-top: 0;
+
+  .our-sponsors {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+
+    @-webkit-keyframes slideshow {
+      0%    { left: 0; }
+      100%  { left: -100%; }
+    }
+    @-moz-keyframes slideshow {
+      0%    { left: 0; }
+      100%  { left: -100%; }
+    }
+    @keyframes slideshow {
+      0%    { left: 0; }
+      100%  { left: -100%; }
+    }
+
+    .our-sponsors-carousel-wrapper {
+      position: absolute;
+      width: 10000px;
+    }
+
+    .our-sponsors-carousel {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      -webkit-animation: slideshow 100s linear infinite;
+      -moz-animation:    slideshow 100s linear infinite;
+      -ms-animation:    slideshow 100s linear infinite;
+      -o-animation:    slideshow 100s linear infinite;
+      animation:    slideshow 100s linear infinite;
+    }
+
+    .sponsor-image {
+      height: 115px;
+    }
+  }
+}
