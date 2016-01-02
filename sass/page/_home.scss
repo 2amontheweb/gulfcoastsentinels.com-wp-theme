@@ -106,31 +106,78 @@
     }
   }
 
-
-
-
-
-
-
   .sentinels {
+    background-color: $blue4;
+    @include background-g(0deg, #0555c0, 5%, #073068, 95%);
+    color: $white1;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    @include rem-fallback(margin,  5, 0);
 
+    h2 {
+      margin: 0;
+      font-family: $funky;
+      text-align: center;
+      font-size: 3.5em;
+      font-weight: 300;
+      letter-spacing: 1px;
+      text-align: center;
+      color: $white2;
+      border-bottom: 4px solid $white2;
+      @include rem-fallback(padding, 1, 0);
+    }
+    .sentinel {
+      border-bottom: 2px solid $white2;
+      background-color: #083f88;
+      background: linear-gradient(0deg, #0555c0 5%, #073068 95%);
+      @include rem-fallback(padding, 2.25, 1.5);
+
+      &:last-child {
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+      }
+      img {
+        max-height: 200px;
+        margin: 0 auto;
+        border-radius: 6px;
+        box-shadow: 0px 5px 22px 5px rgba(50, 50, 50, 0.75);
+        border: 2px solid #C2DAFB;
+        margin: 0 auto;
+      }
+
+      h5 {
+        margin-top: 0;
+      }
+
+      p {
+        font-size: 1.5em;
+
+        .read-more-link {
+          color: $white2;
+          letter-spacing: 0.5px;
+          @include rem-fallback(padding-left, 0.25);
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+    }
   }
-
-
-
-
-
-
-
-
-
-
 
   .our-sponsors {
     position: relative;
     height: 200px;
     width: 100%;
     overflow: hidden;
+
+    h2 {
+      font-size: 4em;
+      font-weight: 600;
+      margin: 0 0 10px;
+      text-align: left;
+    }
 
     @-webkit-keyframes slideshow {
       0%    { left: 0; }

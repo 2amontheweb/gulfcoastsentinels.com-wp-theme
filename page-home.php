@@ -102,25 +102,25 @@ get_header(); ?>
 
 
 
-    <div class="sentinels">
-      <div class="container">
-        <div class="row">
-          <h2>Meet Our Sentinels</h2>
-          <?php
+    <div class="container">
+      <div class="sentinels">
+        <h2>Meet Our Sentinels</h2>
+        <?php
 
-            $sentinels = new WP_Query( array(
-              'post_type' => 'sentinel',
-              'order' => 'ASC'
-            ));
+          $sentinels = new WP_Query( array(
+            'post_type' => 'sentinel',
+            'order' => 'ASC'
+          ));
 
-            while( $sentinels->have_posts() ) : $sentinels->the_post();
+          while( $sentinels->have_posts() ) : $sentinels->the_post();
 
-              $military_branch   = get_field('military_branch');
-              $retired   = get_field('retired');
-              $summary_of_service   = get_field('summary_of_service');
-              $profile_photo   = get_field('profile_photo');
+            $military_branch   = get_field('military_branch');
+            $retired   = get_field('retired');
+            $summary_of_service   = get_field('summary_of_service');
+            $profile_photo   = get_field('profile_photo');
 
-          ?>
+        ?>
+          <div class="sentinel">
             <div class="row">
               <div class="col-sm-4">
                 <?php if ( $profile_photo ) : ?>
@@ -136,22 +136,26 @@ get_header(); ?>
                 </h5>
 
                 <?php if ( $summary_of_service ) : ?>
-                  <p><?php echo $summary_of_service; ?></p>
+                  <div class="summary">
+                    <p><?php echo $summary_of_service; ?></p>
+                  </div>
                 <?php endif; ?>
               </div>
             </div>
+          </div>
 
-          <?php
+        <?php
 
-            endwhile; wp_reset_query();
+          endwhile; wp_reset_query();
 
-          ?>
-        </div>
+        ?>
       </div>
     </div>
 
     <div class="our-sponsors">
-      <h2>Our Sponsors</h2>
+      <div class="container">
+        <h2>Our Sponsors</h2>
+      </div>
       <div class="our-sponsors-carousel-wrapper">
         <div class="our-sponsors-carousel">
 
@@ -167,9 +171,9 @@ get_header(); ?>
               $home_carousel_image   = get_field('home_carousel_image');
 
           ?>
-            <?php if ( $home_carousel_image ) : ?>
+            <?#php if ( $home_carousel_image ) : ?>
               <img class="sponsor-image" src="<?php echo $home_carousel_image[url]; ?>" alt="<?php echo $home_carousel_image[alt]; ?>">
-            <?php endif; ?>
+            <?#php endif; ?>
 
           <?php
 
