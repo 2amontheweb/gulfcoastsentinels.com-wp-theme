@@ -97,3 +97,27 @@ div[class^="col-"], div[class*=" col-"] {
 .custom-page {
   @include rem-fallback(padding, 2, 0, 3);
 }
+
+.table-header {
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0 10px;
+  margin-left: 5px;
+  font-family: $title;
+  color: $blue4;
+}
+
+tr {
+  td {
+    padding: 5px;
+    font-size: 1.25em;
+    strong {
+      color: $blue4;
+      font-family: $title;
+      font-size: 1.25em;
+    }
+  }
+}
+td {
+  @include rem-fallback(padding-bottom, 0.5);
+}

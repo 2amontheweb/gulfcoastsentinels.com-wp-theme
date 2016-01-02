@@ -1,0 +1,29 @@
+.month-name {
+  font-size: 4em;
+  font-weight: 600;
+}
+.event {
+  @include rem-fallback(padding-left, 1);
+  .event-title {
+    margin: 40px 0 0;
+    font-weight: 600;
+    font-size: 3em;
+    color: $blue4;
+  }
+
+  .event-date h5,
+  .event-summary,
+  .event-location,
+  .event-tickets h5,
+  .event-more-info,
+  .event-extra-info {
+    font-size: 2em;
+    margin-left: 25px;
+  }
+
+  .event-tickets {
+    border: 3px solid $blue4;
+    border-radius: 5px;
+    margin: 25px 0px 25px 25px;
+  }
+}
