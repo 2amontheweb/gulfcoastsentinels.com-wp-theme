@@ -1,6 +1,131 @@
 #page-home {
   padding-top: 0;
 
+  .our-mission {
+    @include rem-fallback(padding, 2, 0);
+
+    .donate-button {
+      margin-top: 60px;
+      .button-link {
+        display: block;
+        width: 225px;
+        margin: 0 auto;
+      }
+      .button-image {
+        border-radius: 9px;
+        width: 225px;
+        border: 3px solid $blue5;
+      }
+    }
+    .get-involved {
+      button {
+        font-size: 2.5em;
+        width: 225px;
+        margin: 40px auto;
+        display: block;
+        color: $white1;
+        font-family: $funky;
+        background: $gold4;
+        -moz-box-shadow: inset 0 1px 0 0 $gold2, 0 1px 2px 0 $black;
+        -webkit-box-shadow: inset 0 1px 0 0 $gold2, 0 1px 2px 0 $black;
+        text-shadow: 0 -1px 1px $gold2;
+        border: 3px solid $blue5;
+        border-radius: 9px;
+
+        &:hover,
+        &:focus,
+        &:visited {
+          background: $gold5;
+          -moz-box-shadow: inset 0 1px 0 0 $gold1;
+          -webkit-box-shadow: inset 0 1px 0 0 $gold1;
+          cursor: pointer;
+          text-shadow: 0 -1px 1px $gold1;
+          color: $white1;
+
+        }
+        &:active {
+          background: $gold3;
+          -moz-box-shadow: inset 0 0 6px 3px $gold5, 0 1px 0 0 $white1;
+          -webkit-box-shadow: inset 0 0 6px 3px $gold5, 0 1px 0 0 $white1;
+          text-shadow: 0 -1px 1px $black;
+          color: $white1;
+        }
+
+        .button-link {
+          text-decoration: none;
+          color: $white1;
+        }
+      }
+    }
+  }
+
+  .upcoming-events {
+    .header-container {
+      border-bottom: 3px solid rgb(194, 218, 251);
+    }
+    h2 {
+      font-size: 3.5em;
+      font-weight: bold;
+      color: $blue4;
+      text-align: left;
+      padding-bottom: 0;
+    }
+
+    .upcoming-event {
+      background-color: #062856;
+      border-bottom: 3px solid rgb(194, 218, 251);
+      @include rem-fallback(padding, 1, 0);
+
+      h4 {
+        font-size: 3.75em;
+        font-weight: 600;
+        color: $white1;
+      }
+
+      h6 {
+        font-size: 3em;
+        color: rgb(194, 218, 251);
+        @include rem-fallback(padding-bottom, 1);
+      }
+
+      p {
+        color: $white1;
+        font-family: $text;
+        font-size: 2em;
+      }
+      img {
+        border: 2px solid $white1;
+        border-radius: 3px;
+        margin: 30px auto;
+        vertical-align: middle;
+        width: 265px;
+        display: block;
+
+      }
+
+    }
+  }
+
+
+
+
+
+
+
+  .sentinels {
+
+  }
+
+
+
+
+
+
+
+
+
+
+
   .our-sponsors {
     position: relative;
     height: 200px;

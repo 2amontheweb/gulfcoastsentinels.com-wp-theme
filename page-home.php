@@ -24,40 +24,56 @@ get_header(); ?>
             <p>To provide life-changing opportunities for men and women of the U.S. Armed Forces who have suffered severe injuries post 9/11 and need the support of grateful communities to realize their goals and dreams.</p>
           </div>
           <div class="col-sm-5">
+            <div class="donate-button">
+              <a href="/want-to-donate" class="button-link">
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/img/donate.jpg" class="button-image">
+              </a>
+            </div>
+            <div class="get-involved">
+              <button type="button" class="btn">
+                <a href="/volunteer" class="button-link">GET INVOLVED</a>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+
+
     <div class="upcoming-events">
-      <div class="container">
-        <div class="row">
+      <div class="header-container">
+        <div class="container">
           <h2>Upcoming Events</h2>
+        </div>
+      </div>
 
+      <?php
 
-          <?php
+        $upcoming_events = new WP_Query( array(
+          'post_type' => 'event',
+          'order' => 'ASC'
+        ));
 
-            $upcoming_events = new WP_Query( array(
-              'post_type' => 'event',
-              'order' => 'ASC'
-            ));
+        while( $upcoming_events->have_posts() ) : $upcoming_events->the_post();
 
-            while( $upcoming_events->have_posts() ) : $upcoming_events->the_post();
+          $on_home_page   = get_field('on_home_page');
+          $start_date   = get_field('start_date');
+          $end_date   = get_field('end_date');
+          $home_page_title   = get_field('home_page_title');
+          $home_page_excerpt   = get_field('home_page_excerpt');
+          $home_page_image   = get_field('home_page_image');
+          $page_link = get_field('page_link');
 
-              $on_home_page   = get_field('on_home_page');
-              $start_date   = get_field('start_date');
-              $end_date   = get_field('end_date');
-              $home_page_title   = get_field('home_page_title');
-              $home_page_excerpt   = get_field('home_page_excerpt');
-              $home_page_image   = get_field('home_page_image');
-
-          ?>
-            <?php if ( $on_home_page ) : ?>
-
-              <div class="upcoming-event row">
+      ?>
+      <?php if ( $on_home_page ) : ?>
+        <a href="<?php echo $page_link; ?>">
+          <div class="upcoming-event">
+            <div class="container">
+              <div class="row">
 
                 <div class="col-sm-8">
-                  <h5><?php echo the_title(); ?></h5>
+                  <h4><?php echo the_title(); ?></h4>
                   <h6>
                     <?php echo date("M d, Y", strtotime( $start_date )); ?>
                     <?php if ( $end_date ) : ?>
@@ -72,15 +88,19 @@ get_header(); ?>
                 </div>
 
               </div>
+            </div>
+          </div>
+        </a>
+      <?php endif; ?>
 
-            <?php endif; ?>
-
-          <?php
-            endwhile;  wp_reset_query();
-          ?>
-        </div>
-      </div>
+      <?php
+        endwhile;  wp_reset_query();
+      ?>
     </div>
+
+
+
+
 
     <div class="sentinels">
       <div class="container">
