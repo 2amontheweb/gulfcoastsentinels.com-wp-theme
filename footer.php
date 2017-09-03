@@ -17,7 +17,7 @@
             <div class="col-sm-8">
               <h4>Get Involved</h4>
               <h6>Interested in getting involved?</h6>
-              <p>If you would like to volunteer for the Gulf Coast Sentinels Scholarship Foundation, we would love to talk to you. Email us at <a href="mailto:lorena@sentinelsoffreedomgulfcoast.org">Lorena@sentinelsoffreedomgulfcoast.org</a>.</p>
+              <p>If you would like to volunteer for the Gulf Coast Sentinels Scholarship Foundation, we would love to talk to you. Email us at <a href="mailto:lorena@gulfcoastsentinels.org">lorena@gulfcoastsentinels.org</a>.</p>
               <p>Website created by <a href="http://jimmypocock.com">Jimmy Pocock</a> with <a href="https://wordpress.org">WordPress</a></p>
             </div>
             <div class="col-sm-4">
@@ -25,7 +25,7 @@
               <ul>
                 <li><a href="https://www.facebook.com/Gulf-Coast-Sentinels-349914720144/" target="_blank"><i class="fa fa-facebook"></i>Facebook</a></li>
                 <li><a href="https://www.youtube.com/channel/UCvI6rqUomw6lhF4hEKp2EaQ" target="_blank"><i class="fa fa-youtube"></i>YouTube</a></li>
-                <li><a href="mailto:lorena@sentinelsoffreedomgulfcoast.org"><i class="fa fa-envelope"></i>Email</a></li>
+                <li><a href="mailto:lorena@gulfcoastsentinels.org"><i class="fa fa-envelope"></i>Email</a></li>
               </ul>
             </div>
           </div>

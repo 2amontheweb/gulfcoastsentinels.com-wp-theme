@@ -34,6 +34,11 @@ get_header(); ?>
                 <a href="/volunteer" class="button-link">GET INVOLVED</a>
               </button>
             </div>
+            <div class="apply">
+              <button type="button" class="btn">
+                <a href="/form" class="button-link">APPLY</a>
+              </button>
+            </div>
           </div>
         </div>
       </div>

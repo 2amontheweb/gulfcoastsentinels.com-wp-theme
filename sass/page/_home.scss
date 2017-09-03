@@ -57,6 +57,46 @@
         }
       }
     }
+    .apply {
+      button {
+        font-size: 2.5em;
+        width: 225px;
+        margin: 40px auto;
+        display: block;
+        color: $white1;
+        font-family: $funky;
+        background: $blue4;
+        -moz-box-shadow: inset 0 1px 0 0 $blue2, 0 1px 2px 0 $black;
+        -webkit-box-shadow: inset 0 1px 0 0 $blue2, 0 1px 2px 0 $black;
+        text-shadow: 0 -1px 1px $blue2;
+        border: 3px solid $blue5;
+        border-radius: 9px;
+
+        &:hover,
+        &:focus,
+        &:visited {
+          background: $blue5;
+          -moz-box-shadow: inset 0 1px 0 0 $blue1;
+          -webkit-box-shadow: inset 0 1px 0 0 $blue1;
+          cursor: pointer;
+          text-shadow: 0 -1px 1px $blue1;
+          color: $white1;
+
+        }
+        &:active {
+          background: $blue3;
+          -moz-box-shadow: inset 0 0 6px 3px $blue5, 0 1px 0 0 $white1;
+          -webkit-box-shadow: inset 0 0 6px 3px $blue5, 0 1px 0 0 $white1;
+          text-shadow: 0 -1px 1px $black;
+          color: $white1;
+        }
+
+        .button-link {
+          text-decoration: none;
+          color: $white1;
+        }
+      }
+    }
   }
 
   .upcoming-events {
